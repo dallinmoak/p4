@@ -26,12 +26,22 @@ execute:
 ---
 
 ```{python}
+import os
 
+_ = os.getcwd()
 ```
 
 
 ```{python}
+from p4_source import prospects
 
+prospects
+```
+
+```{python}
+from p4_source import before_1980_aggs
+
+before_1980_aggs
 ```
 
 ## Elevator pitch
