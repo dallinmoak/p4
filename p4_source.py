@@ -4,7 +4,7 @@ from lets_plot import *
 
 LetsPlot.setup_html(isolated_frame=True)
 
-df = pd.read_csv('/home/dallinmoak/school/ds250-wrapper/p4/dwellings_ml.csv')
+df = pd.read_csv('./dwellings_ml.csv')
 
 potential_indicators = [
     'netprice',
