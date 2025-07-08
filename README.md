@@ -12,3 +12,6 @@ install and run the notebook:
 pip install -r requirements.txt
 quarto render {notebook}.qmd --out index.html
 ````
+### Prod Link
+
+[dallinmoak.github.io/p4](https://dallinmoak.github.io/p4/)
