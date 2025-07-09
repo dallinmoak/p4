@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 from lets_plot import *
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
 
 LetsPlot.setup_html(isolated_frame=True)
 
@@ -17,6 +20,25 @@ sprice_frame = df.groupby("before1980")["sprice"].mean().reset_index()
 sprice_chart = ggplot(
     data=sprice_frame.reset_index(), mapping=aes(x="before1980", y="sprice")
 ) + geom_bar(stat="identity")
+
+# i'm excluding parcel 'cause it's not a real meaningful info about the house, and yrbuilt would kind of be cheating.
+features = df.drop(columns=["before1980", "yrbuilt", "parcel"])
+labels = df["before1980"]
+
+features_training, features_test, labels_training, labels_test = train_test_split(
+    features,
+    labels,
+    test_size=0.05,
+    random_state=0,
+)
+
+gaussianNB_model = GaussianNB()
+
+gaussianNB_model.fit(features_training, labels_training)
+
+gaussianNB_predictions = gaussianNB_model.predict(features_test)
+
+gaussianNB_score = accuracy_score(labels_test, gaussianNB_predictions)
 
 # potential_indicators = [
 #     "netprice",

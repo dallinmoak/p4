@@ -61,11 +61,13 @@ sprice_chart
 
 __Build a classification model labeling houses as being built “before 1980” or “during or after 1980”.__ Your goal is to reach or exceed 90% accuracy. Explain your final model choice (algorithm, tuning parameters, etc) and describe what other models you tried.  
 
-_type your results and analysis here_
+_Ok the obvious starting point is the GaussianNB model. I'm going to follow standard practice and split out the data set into test and training data, then split things out into features and labels where the label is just values for `before1980` and features contains all the other columns in the dataset, but with no cheating by giving the model the answers (AKA excluding the `before1980` and `yrbuilt` columns). I did some basic reading about the GaussianNB parameters of priors and var_smoothing, and it seems like for priors, leaving a default value and letting the balance of classes be set by the training data instead of forcing some assumption of 50-50 is the best. for the var_smoothing, it seems like there's not any accuracy gained by turning it down lower than the default value. I will increase it if there's any errors so that it doesn't get stuck on similar values._
 
+_here's the GaussianNB model I built:_
 ```{python}
+from p4_source import gaussianNB_score
 
-
+f"GaussianNB accuracy: {gaussianNB_score}"
 ```
 
 
