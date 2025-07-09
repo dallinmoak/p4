@@ -51,6 +51,9 @@ _I checked for a simple relationship between `before1980` and `livearea` average
 from p4_source import livearea_chart, sprice_chart
 
 livearea_chart
+```
+
+```{python}
 sprice_chart
 ```
 
@@ -67,7 +70,7 @@ from p4_source import gaussianNB_score
 f"GaussianNB accuracy: {gaussianNB_score}"
 ```
 
-_Next, I asked my brother, a data scientist which model he recommends, and he pointed me to logistic regression. It seems this model is a lot more complicated to use than the NB ones. I ran it with no settings, and it was getting ~= 80$ scores. I tried with 1000 iterations and it got up to 84% accuracy.
+_Next, I asked my brother, a data scientist, which model he recommends, and he pointed me to logistic regression. It seems this model is a lot more complicated to use than the NB ones. I ran it with no settings, and it was getting ~= 80% scores. I tried with 1000 iterations and it got up to 85% accuracy.
 ```{python}
 from p4_source import logistic_score
 f"Logistic Regression (unscaled) accuracy: {logistic_score}"
