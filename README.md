@@ -4,7 +4,7 @@ quick setup script:
 python3 -m venv .venv
 source .venv/bin/activate
 touch requirements.txt
-pip install jupyter pandas lets_plot
+pip install jupyter pandas lets_plot numpy scikit-learn
 pip freeze > requirements.txt
 ```
 install and run the notebook:

@@ -33,16 +33,11 @@ _ = os.getcwd()
 
 
 ```{python}
-from p4_source import prospects
+from p4_source import df
 
-prospects
+df.describe()
 ```
 
-```{python}
-from p4_source import before_1980_aggs
-
-before_1980_aggs
-```
 
 ## Elevator pitch
 _A SHORT (2-3 SENTENCES) PARAGRAPH THAT `DESCRIBES KEY INSIGHTS` TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS._ (Note: this is not a summary of the project, but a summary of the results.)
@@ -53,13 +48,14 @@ _A Client has requested this analysis and this is your one shot of what you woul
 
 __Create 2-3 charts that evaluate potential relationships between the home variables and `before1980`.__ Explain what you learn from the charts that could help a machine learning algorithm. 
 
-_type your results and analysis here_
+_I checked for a simple relationship between `before1980` and `livearea` average. the older ones are a little bit smaller on average, but it's not much. Also, I checked the `sprice` average and it seems that the older ones are a little bit cheaper on average. This tells me that a very basic naive bayes model might not be able to find simple single-variable relationships._
 
 ```{python}
+from p4_source import livearea_chart, sprice_chart
 
-
+livearea_chart
+sprice_chart
 ```
-
 
 ## QUESTION|TASK 2
 
