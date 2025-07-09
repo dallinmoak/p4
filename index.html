@@ -2213,6 +2213,7 @@ vertical-align: -.125em;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
+  <li><a href="#source" id="toc-source">source</a></li>
   <li><a href="#elevator-pitch" id="toc-elevator-pitch">Elevator pitch</a></li>
   <li><a href="#questiontask-1" id="toc-questiontask-1">QUESTION|TASK 1</a></li>
   <li><a href="#questiontask-2" id="toc-questiontask-2">QUESTION|TASK 2</a></li>
@@ -2223,7 +2224,7 @@ vertical-align: -.125em;
   <li><a href="#stretch-questiontask-3" id="toc-stretch-questiontask-3">STRETCH QUESTION|TASK 3</a></li>
   </ul>
 </nav>
-<div id="eed91f22" class="cell" data-execution_count="1">
+<div id="adab97a4" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -2231,244 +2232,10 @@ vertical-align: -.125em;
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> os.getcwd()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="57900048" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> p4_source <span class="im">import</span> df</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">abstrprd</th>
-<th data-quarto-table-cell-role="th">livearea</th>
-<th data-quarto-table-cell-role="th">finbsmnt</th>
-<th data-quarto-table-cell-role="th">basement</th>
-<th data-quarto-table-cell-role="th">yrbuilt</th>
-<th data-quarto-table-cell-role="th">totunits</th>
-<th data-quarto-table-cell-role="th">stories</th>
-<th data-quarto-table-cell-role="th">nocars</th>
-<th data-quarto-table-cell-role="th">numbdrm</th>
-<th data-quarto-table-cell-role="th">numbaths</th>
-<th data-quarto-table-cell-role="th">...</th>
-<th data-quarto-table-cell-role="th">arcstyle_THREE-STORY</th>
-<th data-quarto-table-cell-role="th">arcstyle_TRI-LEVEL</th>
-<th data-quarto-table-cell-role="th">arcstyle_TRI-LEVEL WITH BASEMENT</th>
-<th data-quarto-table-cell-role="th">arcstyle_TWO AND HALF-STORY</th>
-<th data-quarto-table-cell-role="th">arcstyle_TWO-STORY</th>
-<th data-quarto-table-cell-role="th">qualified_Q</th>
-<th data-quarto-table-cell-role="th">qualified_U</th>
-<th data-quarto-table-cell-role="th">status_I</th>
-<th data-quarto-table-cell-role="th">status_V</th>
-<th data-quarto-table-cell-role="th">before1980</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">count</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>...</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-<td>22913.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">mean</td>
-<td>1118.980099</td>
-<td>1510.783485</td>
-<td>330.511936</td>
-<td>524.501942</td>
-<td>1963.685506</td>
-<td>1.018461</td>
-<td>1.419849</td>
-<td>1.362589</td>
-<td>2.522062</td>
-<td>2.351416</td>
-<td>...</td>
-<td>0.001615</td>
-<td>0.011827</td>
-<td>0.014010</td>
-<td>0.007201</td>
-<td>0.208921</td>
-<td>0.673853</td>
-<td>0.326147</td>
-<td>0.945926</td>
-<td>0.054074</td>
-<td>0.624929</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">std</td>
-<td>152.603144</td>
-<td>787.018142</td>
-<td>469.912502</td>
-<td>567.653028</td>
-<td>36.928700</td>
-<td>0.256309</td>
-<td>0.568886</td>
-<td>1.097619</td>
-<td>0.884602</td>
-<td>1.117339</td>
-<td>...</td>
-<td>0.040153</td>
-<td>0.108111</td>
-<td>0.117532</td>
-<td>0.084555</td>
-<td>0.406546</td>
-<td>0.468812</td>
-<td>0.468812</td>
-<td>0.226169</td>
-<td>0.226169</td>
-<td>0.484152</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">min</td>
-<td>100.000000</td>
-<td>293.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1873.000000</td>
-<td>0.000000</td>
-<td>1.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">25%</td>
-<td>1112.000000</td>
-<td>975.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1940.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>0.000000</td>
-<td>2.000000</td>
-<td>2.000000</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">50%</td>
-<td>1112.000000</td>
-<td>1302.000000</td>
-<td>0.000000</td>
-<td>401.000000</td>
-<td>1963.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>2.000000</td>
-<td>2.000000</td>
-<td>2.000000</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.000000</td>
-<td>0.000000</td>
-<td>1.000000</td>
-<td>0.000000</td>
-<td>1.000000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">75%</td>
-<td>1114.000000</td>
-<td>1823.000000</td>
-<td>716.000000</td>
-<td>959.000000</td>
-<td>2002.000000</td>
-<td>1.000000</td>
-<td>2.000000</td>
-<td>2.000000</td>
-<td>3.000000</td>
-<td>3.000000</td>
-<td>...</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>0.000000</td>
-<td>1.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">max</td>
-<td>9279.000000</td>
-<td>21503.000000</td>
-<td>4320.000000</td>
-<td>9025.000000</td>
-<td>2013.000000</td>
-<td>10.000000</td>
-<td>4.000000</td>
-<td>17.000000</td>
-<td>9.000000</td>
-<td>11.000000</td>
-<td>...</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-<td>1.000000</td>
-</tr>
-</tbody>
-</table>
-
-<p>8 rows × 50 columns</p>
-</div>
-</div>
-</div>
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">source</h2>
+<p>source material comes from <a href="./p4_source.py">p4_source.py</a></p>
+</section>
 <section id="elevator-pitch" class="level2">
 <h2 class="anchored" data-anchor-id="elevator-pitch">Elevator pitch</h2>
 <p><em>A SHORT (2-3 SENTENCES) PARAGRAPH THAT <code>DESCRIBES KEY INSIGHTS</code> TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.</em> (Note: this is not a summary of the project, but a summary of the results.)</p>
@@ -2478,15 +2245,15 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="questiontask-1">QUESTION|TASK 1</h2>
 <p><strong>Create 2-3 charts that evaluate potential relationships between the home variables and <code>before1980</code>.</strong> Explain what you learn from the charts that could help a machine learning algorithm.</p>
 <p><em>I checked for a simple relationship between <code>before1980</code> and <code>livearea</code> average. the older ones are a little bit smaller on average, but it’s not much. Also, I checked the <code>sprice</code> average and it seems that the older ones are a little bit cheaper on average. This tells me that a very basic naive bayes model might not be able to find simple single-variable relationships.</em></p>
-<div id="637b5dec" class="cell" data-execution_count="3">
+<div id="865a479e" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> p4_source <span class="im">import</span> livearea_chart, sprice_chart</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>livearea_chart</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sprice_chart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> p4_source <span class="im">import</span> livearea_chart, sprice_chart</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>livearea_chart</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>sprice_chart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="14">
 
    
        <meta charset="UTF-8">
@@ -2495,7 +2262,7 @@ vertical-align: -.125em;
 //# sourceMappingURL=lets-plot.js.map</script>
    
    
-          <div id="y1iL8w"></div>
+          <div id="tA3pQU"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -2520,7 +2287,7 @@ vertical-align: -.125em;
        };
    }
    
-   const containerDiv = document.getElementById("y1iL8w");
+   const containerDiv = document.getElementById("tA3pQU");
    let fig = null;
    
    function renderPlot() {
@@ -2559,7 +2326,7 @@ vertical-align: -.125em;
 }
 }],
 "metainfo_list":[],
-"spec_id":"1"
+"spec_id":"3"
 };
            fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing);
        } else {
@@ -2612,17 +2379,40 @@ vertical-align: -.125em;
 <p><strong>Build a classification model labeling houses as being built “before 1980” or “during or after 1980”.</strong> Your goal is to reach or exceed 90% accuracy. Explain your final model choice (algorithm, tuning parameters, etc) and describe what other models you tried.</p>
 <p><em>Ok the obvious starting point is the GaussianNB model. I’m going to follow standard practice and split out the data set into test and training data, then split things out into features and labels where the label is just values for <code>before1980</code> and features contains all the other columns in the dataset, but with no cheating by giving the model the answers (AKA excluding the <code>before1980</code> and <code>yrbuilt</code> columns). I did some basic reading about the GaussianNB parameters of priors and var_smoothing, and it seems like for priors, leaving a default value and letting the balance of classes be set by the training data instead of forcing some assumption of 50-50 is the best. for the var_smoothing, it seems like there’s not any accuracy gained by turning it down lower than the default value. I will increase it if there’s any errors so that it doesn’t get stuck on similar values.</em></p>
 <p><em>here’s the GaussianNB model I built:</em></p>
-<div id="be8a7939" class="cell" data-execution_count="4">
+<div id="6fe19b75" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> p4_source <span class="im">import</span> gaussianNB_score</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">f&quot;GaussianNB accuracy: </span><span class="sc">{</span>gaussianNB_score<span class="sc">}</span><span class="ss">&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> p4_source <span class="im">import</span> gaussianNB_score</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">f&quot;GaussianNB accuracy: </span><span class="sc">{</span>gaussianNB_score<span class="sc">}</span><span class="ss">&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>&#39;GaussianNB accuracy: 0.6684118673647469&#39;</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>&#39;GaussianNB accuracy: 0.6793193717277487&#39;</code></pre>
 </div>
 </div>
+<p>_Next, I asked my brother, a data scientist which model he recommends, and he pointed me to logistic regression. It seems this model is a lot more complicated to use than the NB ones. I ran it with no settings, and it was getting ~= 80$ scores. I tried with 1000 iterations and it got up to 84% accuracy.</p>
+<div id="a5807519" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> p4_source <span class="im">import</span> logistic_score</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ss">f&quot;Logistic Regression (unscaled) accuracy: </span><span class="sc">{</span>logistic_score<span class="sc">}</span><span class="ss">&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>&#39;Logistic Regression (unscaled) accuracy: 0.856020942408377&#39;</code></pre>
+</div>
+</div>
+<p><em>The sklearn thing gave a <code>ConvergenceWarning</code> so I tried scaling the data with <code>StandardScaler</code> and it got up to 87%:</em></p>
+<div id="3d9ff347" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> p4_source <span class="im">import</span> logistic_score_scaled</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ss">f&quot;Logistic Regression (scaled) accuracy: </span><span class="sc">{</span>logistic_score_scaled<span class="sc">}</span><span class="ss">&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>&#39;Logistic Regression (scaled) accuracy: 0.8739092495636999&#39;</code></pre>
+</div>
+</div>
+<p>_the accuracy scores indicate that linear regression model with scaled data is more effective than the gaussianNB model.</p>
 </section>
 <section id="questiontask-3" class="level2">
 <h2 class="anchored" data-anchor-id="questiontask-3">QUESTION|TASK 3</h2>

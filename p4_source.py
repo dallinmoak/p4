@@ -3,6 +3,8 @@ import numpy as np
 from lets_plot import *
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import LogisticRegression
+from sklearn import preprocessing
 from sklearn.metrics import accuracy_score
 
 LetsPlot.setup_html(isolated_frame=True)
@@ -26,10 +28,7 @@ features = df.drop(columns=["before1980", "yrbuilt", "parcel"])
 labels = df["before1980"]
 
 features_training, features_test, labels_training, labels_test = train_test_split(
-    features,
-    labels,
-    test_size=0.05,
-    random_state=0,
+    features, labels, test_size=0.1, random_state=0
 )
 
 gaussianNB_model = GaussianNB()
@@ -40,32 +39,23 @@ gaussianNB_predictions = gaussianNB_model.predict(features_test)
 
 gaussianNB_score = accuracy_score(labels_test, gaussianNB_predictions)
 
-# potential_indicators = [
-#     "netprice",
-#     "livearea",
-#     "totunits",
-#     "numbdrm",
-#     "numbaths",
-#     "nocars",
-#     "stories",
-# ]
+logistic_model = LogisticRegression(max_iter=1000)
 
-# raw_prospects = df[potential_indicators + ["yrbuilt"]]
+logistic_model.fit(features_training, labels_training)
 
-# prospects = pd.DataFrame()
+logistic_predictions = logistic_model.predict(features_test)
 
-# prospects["before_1980"] = raw_prospects["yrbuilt"].apply(lambda x: x < 1980)
+logistic_score = accuracy_score(labels_test, logistic_predictions)
 
-# prospects = prospects.join(raw_prospects[potential_indicators])
+features_training_scaled = preprocessing.StandardScaler().fit_transform(
+    features_training
+)
+features_test_scaled = preprocessing.StandardScaler().fit_transform(features_test)
 
-# before_1980_aggs = prospects.groupby("before_1980").mean().reset_index()
+logistic_model_scaled = LogisticRegression(max_iter=1000)
 
-# labels =  taget values (aka answers aka y), don't let the bot know the IDs, but keep it in the same order as the training vectors
-# +---------------+
-# | 'before_1980' |
-# +---------------+
-# | FALSE         |
-# | TRUE          |
+logistic_model_scaled.fit(features_training_scaled, labels_training)
 
+logistic_predictions_scaled = logistic_model_scaled.predict(features_test_scaled)
 
-# training_vectors = list all the columns that might predict the target values, with ids, but HIDE the answers (no cheating for the bot)
+logistic_score_scaled = accuracy_score(labels_test, logistic_predictions_scaled)

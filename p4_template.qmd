@@ -32,11 +32,8 @@ _ = os.getcwd()
 ```
 
 
-```{python}
-from p4_source import df
-
-df.describe()
-```
+## source
+source material comes from [p4_source.py](./p4_source.py)
 
 
 ## Elevator pitch
@@ -69,6 +66,21 @@ from p4_source import gaussianNB_score
 
 f"GaussianNB accuracy: {gaussianNB_score}"
 ```
+
+_Next, I asked my brother, a data scientist which model he recommends, and he pointed me to logistic regression. It seems this model is a lot more complicated to use than the NB ones. I ran it with no settings, and it was getting ~= 80$ scores. I tried with 1000 iterations and it got up to 84% accuracy.
+```{python}
+from p4_source import logistic_score
+f"Logistic Regression (unscaled) accuracy: {logistic_score}"
+```
+
+_The sklearn thing gave a `ConvergenceWarning` so I tried scaling the data with `StandardScaler` and it got up to 87%:_
+
+```{python}
+from p4_source import logistic_score_scaled
+f"Logistic Regression (scaled) accuracy: {logistic_score_scaled}"
+```
+
+_the accuracy scores indicate that linear regression model with scaled data is more effective than the gaussianNB model.
 
 
 ## QUESTION|TASK 3
